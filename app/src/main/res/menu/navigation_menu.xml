@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_offense"
+        android:title="Порушники"
+        android:icon="@drawable/ic_list_offence"/>
+    <item
+        android:id="@+id/nav_scan"
+        android:title="Сканувати"
+        android:icon="@drawable/ic_camera"/>
+    <item
+        android:id="@+id/nav_stat"
+        android:title="Статистика"
+        android:icon="@drawable/ic_statistics"/>
+
+    <item
+        android:id="@+id/nav_setting"
+        android:title="Налаштування"
+        android:icon="@drawable/ic_settings"/>
+
+
+</menu>

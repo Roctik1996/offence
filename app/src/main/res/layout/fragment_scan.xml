@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/scanner"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/scanner"
+        app:layout_constraintBottom_toTopOf="@id/btn_report">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <EditText
+                android:id="@+id/txt_scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:inputType="textCapCharacters"
+                android:drawableEnd="@drawable/ic_search"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/txt_scan"
+                app:layout_constraintTop_toBottomOf="@id/txt_scan"
+                app:layout_constraintEnd_toEndOf="@id/txt_scan"/>
+
+            <TextView
+                android:id="@+id/txt_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/txt_title"
+                app:layout_constraintTop_toBottomOf="@id/txt_title"
+                app:layout_constraintEnd_toEndOf="@id/txt_scan"/>
+
+            <TextView
+                android:id="@+id/txt_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/txt_year"
+                app:layout_constraintTop_toBottomOf="@id/txt_year"
+                app:layout_constraintEnd_toEndOf="@id/txt_scan"/>
+
+            <TextView
+                android:id="@+id/txt_fuel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/txt_color"
+                app:layout_constraintTop_toBottomOf="@id/txt_color"
+                app:layout_constraintEnd_toEndOf="@id/txt_scan"/>
+
+            <TextView
+                android:id="@+id/txt_kind"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/txt_fuel"
+                app:layout_constraintTop_toBottomOf="@id/txt_fuel"
+                app:layout_constraintEnd_toEndOf="@id/txt_scan"/>
+
+            <TextView
+                android:id="@+id/txt_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/txt_kind"
+                app:layout_constraintTop_toBottomOf="@id/txt_kind"
+                app:layout_constraintEnd_toEndOf="@id/txt_scan"/>
+
+            <TextView
+                android:id="@+id/txt_reg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/txt_body"
+                app:layout_constraintTop_toBottomOf="@id/txt_body"
+                app:layout_constraintEnd_toEndOf="@id/txt_scan"/>
+
+            <TextView
+                android:id="@+id/txt_actions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/txt_reg"
+                app:layout_constraintTop_toBottomOf="@id/txt_reg"
+                app:layout_constraintEnd_toEndOf="@id/txt_scan"/>
+
+            <TextView
+                android:id="@+id/txt_empty_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Дані про машину відсутні"
+                android:textColor="@android:color/black"
+                android:visibility="invisible"
+                android:textAllCaps="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:focusable="true"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:elevation="3dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_report"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAllCaps="true"
+        android:text="Повідомити про порушення"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_button"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@id/btn_abort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_price"/>
+
+    <Button
+        android:id="@+id/btn_price"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:textAllCaps="true"
+        android:text="Дізнатися вартість"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_button"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@id/btn_abort"
+        app:layout_constraintStart_toEndOf="@id/btn_report"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_abort"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:textAllCaps="true"
+        android:text="відміна"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

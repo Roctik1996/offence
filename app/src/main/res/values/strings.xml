@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Offense</string>
+    <string name="default_notification_channel_id">com.matichuk.offense.chanel</string>
+    <string-array name="offense_type">
+        <item>Неправильне паркування</item>
+        <item>Проїзд на червоне світло</item>
+        <item>Перевищення швидкості</item>
+        <item>Подвійна суцільна</item>
+        <item>Аварія</item>
+        <item>Інше</item>
+    </string-array>
+</resources>
